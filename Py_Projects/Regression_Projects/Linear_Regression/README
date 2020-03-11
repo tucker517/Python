@@ -1,3 +1,3 @@
 The Linear_Regression.py generates a regression plot and R^2 value for a given data set with specified XY parameters.
-You can run this script using the test csv included within this directory or edit the column name in line () to reflect the title of 
+You can run this script using the test csv included within this directory or edit the column name in lines (20 and 24-27) to reflect the title of 
 the columns you need to read. This script uses pandas, matplotlib, and numpy to accomplish the aforementioned.
