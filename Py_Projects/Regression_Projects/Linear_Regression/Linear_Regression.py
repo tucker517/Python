@@ -17,13 +17,13 @@ import matplotlib.pyplot as plt
 plt.rcParams['figure.figsize'] = (10.0, 10.0)
 
 # Read a test data set, must be csv format! #
-data = pd.read_csv('XXXXX')
+data = pd.read_csv('TestData.csv')
 print(data.shape)
 data.head()
 
 # Specify X and Y Values to Use based on Column Title #
-X = data['XXXX']                
-Y = data['XXXX']
+X = data['Day']                
+Y = data['Sales Numbers']
 
 # Calculate the mean of X and Y values#
 mean_x = np.mean(X)
