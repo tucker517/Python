@@ -22,8 +22,9 @@ print(data.shape)
 data.head()
 
 # Specify X and Y Values to Use based on Column Title #
-X = data['Day']                
-Y = data['Sales Numbers']
+# Edit these column names to run this script on a different data set #
+X = data['Days']                
+Y = data['Number of Sales']
 
 # Calculate the mean of X and Y values#
 mean_x = np.mean(X)
