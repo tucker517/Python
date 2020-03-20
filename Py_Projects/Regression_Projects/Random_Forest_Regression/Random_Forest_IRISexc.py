@@ -93,3 +93,7 @@ test['species'].head()
 # how good our model is. Crosstab takes to sets of data and creates
 # a chart.
 pd.crosstab(test['species'], preds, rownames=['Actual Species'], colnames=['Predicted Species'])
+
+# Now apply those predictions to 2 new flowers inserted as an array of arrays
+preds = iris.target_names[clf.predict( [[5.0, 3.6, 1.4, 2.0],[5.0, 3.6, 1.4, 2.0]] )]
+print('Test_Data', preds)
