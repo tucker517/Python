@@ -1,0 +1,17 @@
+}
+
+	"data_sources": {
+		"Stations": "https://www.ncdc.noaa.gov/cdo-web/api/v2/stations?locationid=FIPS:08"
+	},
+	"csv_sources":{
+	},
+	"MS_SQLConn":{
+		"user":"*****"
+		"password":"*****"
+		"host":"******"
+		"port" : "*****"
+	},
+	{
+	
+	}
+}
