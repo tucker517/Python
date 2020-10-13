@@ -28,9 +28,9 @@ class Transformation:
             stn_no={}
             
             
-            # Taking out yearly GDP value from records
-            stations_colorado['GDP_in_rs_cr'] = int(record['gross_domestic_product_in_rs_cr_at_2004_05_prices'])
-            stations_colorado[record['financial_year']] = stn_no
+            # Taking out station list data
+            stations_colorado['**Kwargs'] = int(record['**Kwargs'])
+            stations_colorado[record['**Kwargs']] = stn_no
             station_list_nos = list(stations_colorado)
             
         
