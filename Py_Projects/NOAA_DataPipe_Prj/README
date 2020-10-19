@@ -21,7 +21,8 @@ in the loading_w_config.py script may be updated to account for a connection to 
 
 Automation:
 -----------
-The _main.py script calls the generic methods of the classes created in the extract, load, and transform scripts to automate the entire etl process.
+The _main.py script automates the entire project if you use a python scheduler to run the scripts Engine class methods. 
+This script works by using a for loop with if statements to call the dataSet objects created from running the Transformation scripts methods.
 
 
 As this code will be refactored and improved as a part of CI/CD, please check back for updates regularly. Thank you!
