@@ -1,21 +1,25 @@
 This is a sample ETL project in which I create 3 scalable python scripts that perform extraction, loading and transformation on a NOAA RESTapi request for weather station data.
 
-Configurability:
+Modularity:
+----------
+The entire project is broken into 3 major componets or class definitions. These are extraction, loading and transformation. Extraction uses generic methods to retrieve data from
+api's using pythons requests module and load csv data as a pandas dataframe.
+
+Scalability:
 ----------------
-The datasouce
+The data_config.json file contains all of the datapoints on api's, csv's and db instances to be extracted to improve script scalability. Additionally, the loading_config.json file
+contains all of the loading database access credentials to maintain script scalability.
+
 
 Mongo DB:
 ---------
-The scripts use pymongo to establish a connection with a server instance of mongodb with authSource admin accessibiltiy.
+This project uses pymongo methods to connect to a Mongo DB instance at the default port number '27017' with admin authSource password. The generic mehtod for configuring the URI string used for the connection
+in the loading_w_config.py script may be updated to account for a connection to a cloud based or Mongo DB Atlas instance in the future.
 
 
 Automation:
 -----------
-The _main.py script calls the generic methods of the classes creted using the extract, load, and transform script to automate the entire etl process.
+The _main.py script calls the generic methods of the classes created in the extract, load, and transform scripts to automate the entire etl process.
 
 
-
-
-
-
-As this code will be refactored and improved in the near future, please check back for updates regularly. Thank you!
+As this code will be refactored and improved as a part of CI/CD, please check back for updates regularly. Thank you!
