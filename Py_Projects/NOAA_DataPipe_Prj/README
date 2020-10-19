@@ -1,14 +1,14 @@
 This is a sample ETL project in which I create 3 scalable python scripts that perform extraction, loading and transformation on a NOAA RESTapi request for weather station data.
 
 Modularity/Functionality:
-----------
+-------------------------
 The project is based on 3 scripts that perform etl operations in such a way as to decrease code overlap and function recreation. These scripts are extraction_w_config.py, 
 loading_w_config.py and transformation_w_config.py. The extraction script uses generic methods to retrieve data from api's using pythons requests module and load mulitple
 csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted data into the target database which is a MongoDB instance 
 in this case. Finally, the transformation_w_config.py script extracts station name, lat and long data from the NOAA api request for warehouse storage.
 
 Scalability:
-----------------
+------------
 The data_config.json file contains all of the datapoints on api's, csv's and db instances to be extracted to improve script scalability.
 
 
@@ -24,4 +24,5 @@ The _main.py script automates the etl process if you use a python scheduler to r
 This script works by using a for loop with if statements to call the dataSet objects created from running the Transformation scripts methods.
 
 
-As this code will be refactored and improved as a part of CI/CD, please check back for updates regularly. Thank you!
+As this code will be refactored and improved as a part of CI/CD, in addition to revisions for more transformation operations including updation. 
+Please check back for updates regularly. Thank you!
