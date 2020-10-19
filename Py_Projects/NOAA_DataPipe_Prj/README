@@ -3,7 +3,7 @@ This is a sample ETL project in which I create 3 scalable python scripts that pe
 Modularity:
 ----------
 The entire project is broken into 3 major componets or class definitions. These are extraction, loading and transformation. Extraction uses generic methods to retrieve data from
-api's using pythons requests module and load csv data as a pandas dataframe.
+api's using pythons requests module and load mulitple csv data as pandas dataframes.
 
 Scalability:
 ----------------
