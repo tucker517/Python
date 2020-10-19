@@ -4,13 +4,12 @@ Modularity/Functionality:
 ----------
 The project is based on 3 scripts that perform etl operations in such a way as to decrease code overlap and function recreation. These scripts are extraction_w_config.py, 
 loading_w_config.py and transformation_w_config.py. The extraction script uses generic methods to retrieve data from api's using pythons requests module and load mulitple
-csv data as pandas dataframes. The loading_w_config.py uses generic methods to load the extracted data into the target database which is a MongoDB instance in this case. Finally,
-the transformation_w_config.py script extracts station name, lat and long data from the NOAA api request for warehouse storage.
+csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted data into the target database which is a MongoDB instance 
+in this case. Finally, the transformation_w_config.py script extracts station name, lat and long data from the NOAA api request for warehouse storage.
 
 Scalability:
 ----------------
-The data_config.json file contains all of the datapoints on api's, csv's and db instances to be extracted to improve script scalability. Additionally, the loading_config.json file
-contains all of the loading database access credentials to maintain script scalability.
+The data_config.json file contains all of the datapoints on api's, csv's and db instances to be extracted to improve script scalability.
 
 
 Mongo DB:
@@ -21,7 +20,7 @@ in the loading_w_config.py script may be updated to account for a connection to 
 
 Automation:
 -----------
-The _main.py script automates the entire project if you use a python scheduler to run the scripts Engine class methods. 
+The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class methods. 
 This script works by using a for loop with if statements to call the dataSet objects created from running the Transformation scripts methods.
 
 
