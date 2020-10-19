@@ -1,5 +1,21 @@
 This is a sample ETL project in which I create 3 scalable python scripts that perform extraction, loading and transformation on a NOAA RESTapi request for weather station data.
-The scripts work with a configurable json file that accounts for variables used in extraction loading and transformation; this way the scripts are almost completely recyclable 
-with minor alterations. This means that these scripts can be improved by refactoring or additiona of transformation operations including update operations for remote data sources.
-This project uses MongoDB, a NOSQL database server which allows for the easy storage and retrieval of json data from database specific collections. Additionally, this project
-can be run as an automation with no user inputs necessary. As this code will be refactored and improved in the near future, please check back for updates regularly. Thank you!
+
+Configurability:
+----------------
+The datasouce
+
+Mongo DB:
+---------
+The scripts use pymongo to establish a connection with a server instance of mongodb with authSource admin accessibiltiy.
+
+
+Automation:
+-----------
+The _main.py script calls the generic methods of the classes creted using the extract, load, and transform script to automate the entire etl process.
+
+
+
+
+
+
+As this code will be refactored and improved in the near future, please check back for updates regularly. Thank you!
