@@ -3,17 +3,19 @@ import json
 import requests
 
 
-class Extract():
+class Extract:
     # Method to load the json configuration file created for API, CSV, and other process info.
     def __init__ (self):
         self.data_sources = json.load(open('data_config.json'))
         self.api = self.data_sources['data_sources']['api']
         self.csv_path = self.data_sources['data_sources']['csv']
+        self.api_tokens = self.data_sources['data_sources']['api_tokens']
    
     # Method to take args for request and define api's to use from config file    
-    def getAPIsData(self, api_name):
+    def getAPIsData(self, api_name, api_token):
         api_url = self.api[api_name]
-        response = requests.get(api_url)
+        payload = self.api_tokens[api_token]
+        response = requests.get(api_url, headers=payload)
     # Create a json format file of the request response variable
         return response.json()
     
@@ -21,11 +23,4 @@ class Extract():
     # Use the config file to load csv's and create a pandas dataframe from the file
         df = pd.read_csv(self.csv_path[csv_name])
         return df
-        
-        
-        
-        
-        
-        
-        
-        
+    
