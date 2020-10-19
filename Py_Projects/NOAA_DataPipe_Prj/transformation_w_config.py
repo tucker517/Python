@@ -2,7 +2,7 @@ from extraction_w_config import Extract
 import urllib
 import pandas as pd
 import numpy as np
-from numpy.core.records import record
+from loading_w_config import MongoDB
 
 class Transformation:
     
@@ -15,22 +15,29 @@ class Transformation:
             self.data = extractObj.getAPIsData(dataSet)
             funcName = dataSource+dataSet
         
+            # getattr function takes in the function name of a class and calls it.
+            getattr(self,funcName)()
+        
         elif dataSource == 'csv':
             self.data = extractObj.getCSVData(dataSet)
+            funcName = dataSource + dataSet
+            getattr(self,funcName)()
 
         else:
-            print('Unkown Data Source!! Please try again...')
+            print('Unknown Data Source!! Please try again...')
             
     # Weather station data transformation
     def apiNOAA(self):
-        stations_colorado = {}
-        for record in self.data['records']:
-            stn_no={}
+        weather_stations = {}
+        for result in self.data['results']:  
+            # Taking out station names, lat, and long
+            weather_stations['Station_Name'] = str(result['name'])
+            weather_stations['Latitude'] = int(result['latitude'])
+            weather_stations['Longitude'] = int(result['longitude'])
             
-            
-            # Taking out station list data
-            stations_colorado['**Kwargs'] = int(record['**Kwargs'])
-            stations_colorado[record['**Kwargs']] = stn_no
-            station_list_nos = list(stations_colorado)
-            
+        # connection to mongo db
+        mongodb_obj = MongoDB(urllib.parse.quote_plus('root'), urllib.parse.quote_plus('password'), 'host', 'NOAA_Station_Data')
+        # Insert Data into MongoDB
+        mongodb_obj.insert_into_db(weather_stations, 'Weather_Stations')
+    
         
