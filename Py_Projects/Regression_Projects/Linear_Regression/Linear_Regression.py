@@ -5,7 +5,7 @@ Created on Feb 24, 2020
 '''
 
 # Basic linear regression Script#
-# This script uses pandas to read a csv file and plot data.#
+# This script uses pandas to read a csv file and matplotlib to plot data.#
 # This script does Linear Regression and prints the R^2 Coefficient to the terminal#
 
 
