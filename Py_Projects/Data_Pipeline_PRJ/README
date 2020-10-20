@@ -1,4 +1,5 @@
+This is a simple project in which random data is generated in flask and 
+
 To use the two scripts in this directory one must run the datagen_api.py script. Once this is done you need to run the ingest.py script
 to send the data through a pipe to a target of your choosing. If this is a very large amount of data it is better to use a cloud server
-or external drive capable of handling the quantity of data you choose to generate. The documentation for this code is in progress so check
-back for updates if you are interested in the progression of this project.
+or external drive capable of handling the quantity of data you choose to generate.
