@@ -3,12 +3,12 @@
 	"data_sources": {
 		"api": {
 			
-			"Stations": "https://www.ncdc.noaa.gov/cdo-web/api/v2/stations?locationid=FIPS:08"
+			"Stations": "https://www.ncdc.noaa.gov/cdo-web/api/v2/stations?locationid=FIPS:08" \\ Example api request uri for NOAA website
 		
 		},
 		
 		"csv": {
-			"TestData": "data.csv"
+			"*******": "***********"
 		
 		},
 		
