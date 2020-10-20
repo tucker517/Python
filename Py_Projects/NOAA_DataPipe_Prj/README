@@ -4,13 +4,14 @@ Modularity/Functionality:
 -------------------------
 The project is based on 3 scripts that perform etl operations in such a way as to decrease code overlap and function recreation. These scripts are extraction_w_config.py, 
 loading_w_config.py and transformation_w_config.py. The extraction script uses generic methods to retrieve data from api's using pythons requests module and load mulitple
-csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted data into the target database which is a MongoDB instance 
-in this case. Finally, the transformation_w_config.py script extracts station name, lat and long data from the NOAA api request for warehouse storage.
+csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted/transformed data into the target database which is a MongoDB instance 
+in this case. I plan to update the script to handle Atlas server uri's in the near future.
 
 Scalability:
 ------------
-The data_config.json file contains all of the datapoints on api's, csv's and db instances to be extracted to improve script scalability.
-
+The extraction script uses a data_config.json file which contains all of the datapoints on api's, csv's, token authentication and more if required. Having all these datapoints
+in a json format file makes it easier for the end user to use the scripts with ease. The only hardcoded updates that are required are updates to the transformation_w_config.py
+script which currently transforms the extracted json format data from the NOAA api endpoint for weather station data.
 
 Mongo DB:
 ---------
