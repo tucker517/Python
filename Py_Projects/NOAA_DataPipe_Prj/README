@@ -4,25 +4,26 @@ Modularity/Functionality:
 -------------------------
 The project is based on 3 scripts that perform etl operations in such a way as to decrease code overlap and function recreation. These scripts are extraction_w_config.py, 
 loading_w_config.py and transformation_w_config.py. The extraction script uses generic methods to retrieve data from api's using pythons requests module and load mulitple
-csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted/transformed data into the target database which is a MongoDB instance 
-in this case. I plan to update the script to handle Atlas server uri's in the near future.
+csv data as pandas dataframes. The loading_w_config.py contains the generic methods for loading the extracted/transformed data into the target database which is a MongoDB
+instance in this case.
 
 Scalability:
 ------------
-The extraction script uses a data_config.json file which contains all of the datapoints on api's, csv's, token authentication and more if required. Having all these datapoints
-in a json format file makes it easier for the end user to use the scripts with ease. The only hardcoded updates that are required are updates to the transformation_w_config.py
-script which currently transforms the extracted json format data from the NOAA api endpoint for weather station data.
+The extraction script uses a data_config.json file which contains all of the datapoints on api's, csv's, token authentication and more if required. Having all these 
+datapoints in a json format file makes it easier for the end user to use the scripts with ease. The only hardcoded updates that are required are updates to the 
+transformation_w_config.py script which currently transforms the extracted json format data from the NOAA api endpoint for weather station data.
 
 Mongo DB:
 ---------
-This project uses pymongo methods to connect to a Mongo DB instance at the default port number '27017' with admin authSource password. The generic method for configuring the URI 
-string used for the connection in the loading_w_config.py script may be updated to account for a connection to a cloud based or Mongo DB Atlas instance in the future.
+This project uses pymongo methods to connect to a Mongo DB instance at the default port number '27017' with admin authSource password. The generic method for 
+configuring the URI string used for the connection in the loading_w_config.py script may be updated to account for a connection to a cloud based or Mongo DB Atlas 
+instance in the future.
 
 
 Automation:
 -----------
-The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class. I am still working to implement the automation process so check back
-for updates.
+The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class. I am still working to implement the automation process so 
+check back for updates.
 
 
 As this code will be refactored and improved as a part of CI/CD, in addition to revisions for more transformation operations including updation. 
