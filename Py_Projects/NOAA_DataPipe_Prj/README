@@ -14,14 +14,14 @@ The data_config.json file contains all of the datapoints on api's, csv's and db 
 
 Mongo DB:
 ---------
-This project uses pymongo methods to connect to a Mongo DB instance at the default port number '27017' with admin authSource password. The generic method for configuring the URI string used for the connection
-in the loading_w_config.py script may be updated to account for a connection to a cloud based or Mongo DB Atlas instance in the future.
+This project uses pymongo methods to connect to a Mongo DB instance at the default port number '27017' with admin authSource password. The generic method for configuring the URI 
+string used for the connection in the loading_w_config.py script may be updated to account for a connection to a cloud based or Mongo DB Atlas instance in the future.
 
 
 Automation:
 -----------
-The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class methods. 
-This script works by using a for loop with if statements to call the dataSet objects created from running the Transformation scripts methods.
+The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class. I am still working to implement the automation process so check back
+for updates.
 
 
 As this code will be refactored and improved as a part of CI/CD, in addition to revisions for more transformation operations including updation. 
