@@ -4,7 +4,7 @@ Created on Feb 27, 2020
 @author: Tucker Celestine
 
 
-A script to generate random data for use UID, 
+A script to generate random data with a UID 
 '''
 
 
