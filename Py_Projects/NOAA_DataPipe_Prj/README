@@ -1,4 +1,4 @@
-This is a sample ETL project in which I create 3 scalable python scripts that perform extraction, loading and transformation on a NOAA RESTapi request for weather station data.
+This is a sample ETL project in which I create 3 python scripts that perform extraction, loading and transformation on a NOAA RESTapi request for weather station data.
 
 Modularity/Functionality:
 -------------------------
