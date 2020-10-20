@@ -22,7 +22,7 @@ instance in the future.
 
 Automation:
 -----------
-The _main.py script automates the etl process if you use a python scheduler to run the scripts Engine class. I am still working to implement the automation process so 
+The _main.py script automates the etl process if you use a python scheduler to run the script. I am still working to implement the automation process so 
 check back for updates.
 
 
