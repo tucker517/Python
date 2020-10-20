@@ -36,7 +36,7 @@ class Transformation:
             weather_stations['Longitude'] = int(result['longitude'])
             
         # connection to mongo db
-        mongodb_obj = MongoDB(urllib.parse.quote_plus('root'), urllib.parse.quote_plus('password'), 'host', 'NOAA_Station_Data')
+        mongodb_obj = MongoDB(urllib.parse.quote_plus('<**root**>'), urllib.parse.quote_plus('<**password**>'), 'host', 'NOAA_Station_Data')
         # Insert Data into MongoDB
         mongodb_obj.insert_into_db(weather_stations, 'Weather_Stations')
     
