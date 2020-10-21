@@ -39,3 +39,9 @@ class Transformation:
         mongodb_obj.insert_into_db(weather_stations, 'Weather_Stations')
     
         
+if __name__ == '__main__':
+    dataSource = input("Please Select the DataSource i.e 'API'/'CSV'/'Database': ").lower()
+    print(dataSource)
+    dataSet = input('Please select the Data set for Transformation: ').title()
+    print(dataSet)
+    trans_obj = Transformation(dataSource, dataSet)
