@@ -11,8 +11,8 @@ class MongoDB:
         self.port = port
         self.db_name = db_name
         self.authSource = authSource
-        self.uri = 'mongodb://' + self.user + ':' + self.password + '@'+ self.host + ':'+ self.port + '/' + self.db_name + '?authSource=' + self.authSource
-       
+        self.uri = 'mongodb://' + self.username + ':' + self.password + '@'+ self.host + ':'+ self.port + '/' + self.db_name + '?authSource=' + self.authSource
+    
         try:
             self.client = MongoClient(self.uri)
             self.db = self.client[self.db_name]
@@ -21,30 +21,30 @@ class MongoDB:
             print("Connection unsuccessful... Please try again...")
             print(e)
             
-# Function to insert data in DB, could handle Python dictionary and Pandas data-frames
-def insert_into_db(self, data, collection):
-    if isinstance(data, pd.DataFrame):
-        try:
-            self.db[collection].insert_many(data.to_dict('results'))
-            print('Data Inserted Successfully')
-        
-        except Exception as e:
-            print('OOPS!!! An error occurred while inserting the data into the database...')
-            print(e)
-        
-        else:
+    # Function to insert data in DB, could handle Python dictionary and Pandas data-frames
+    def insert_into_db(self, data, collection):
+        if isinstance(data, pd.DataFrame):
             try:
-                self.db[collection].insert_many(data)
-                print('Data Inserted Successfully!')
+                self.db[collection].insert_many(data.to_dict('results'))
+                print('Data Inserted Successfully')
+            
             except Exception as e:
-                print("OOPS! An error occurred inserting the data...") 
+                print('OOPS!!! An error occurred while inserting the data into the database...')
                 print(e)
-                
-def read_from_db(self, collection):
-    try:
-        data = pd.DataFrame(list(self.db[collection].find()))  
-        print('Data Fetched Successfully')
-        return data
-    except Exception as e:
-        print("OOPS!! An error occurred while pulling the data from the api")
-        print(e)     
+            
+            else:
+                try:
+                    self.db[collection].insert_many(data)
+                    print('Data Inserted Successfully!')
+                except Exception as e:
+                    print("OOPS! An error occurred inserting the data...") 
+                    print(e)
+                    
+    def read_from_db(self, collection):
+        try:
+            data = pd.DataFrame(list(self.db[collection].find()))  
+            print('Data Fetched Successfully')
+            return data
+        except Exception as e:
+            print("OOPS!! An error occurred while pulling the data from the api")
+            print(e)     
