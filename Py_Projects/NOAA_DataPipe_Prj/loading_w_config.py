@@ -46,5 +46,5 @@ class MongoDB:
             print('Data Fetched Successfully')
             return data
         except Exception as e:
-            print("OOPS!! An error occurred while pulling the data from the api")
+            print("OOPS!! An error occurred while reading data from the database...")
             print(e)     
