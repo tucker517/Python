@@ -4,15 +4,24 @@ from loading_w_config import MongoDB
 
 class Transformation:
     def __init__(self, dataSource, dataSet):
-        
+
+        # Creating Extract class object here, to fetch data using its generic methods for APIs and CSV data sources
         extractObj = Extract()
+
         if dataSource == 'api':
             self.data = extractObj.getAPIsData(dataSet)
+            funcName = dataSource + dataSet
+
+            # getattr function takes in the function name of a class and calls it.
+            getattr(self, funcName)()
+
         elif dataSource == 'csv':
             self.data = extractObj.getCSVsData(dataSet)
+            funcName = dataSource + dataSet
+            getattr(self, funcName)()
+
         else:
-            print("An error occurred!")
-            
+            print('Unknown Data Source!! Please try again...')
     # Weather station data transformation
     def apiNOAA(self):
         weather_stations = {}
