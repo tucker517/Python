@@ -10,17 +10,17 @@
 
 \b		- Word Boundary (Alpha Numeric, White Space, or Start of a sentence)
 \B		- Not a Word Boundary
-^	  	- Beginning of a string (Outside of the Character Set)
+^     - Beginning of a string (Outside of the Character Set)
 $	  	- End of a String
 
 []		- Matches characters in brackets
-[^ ]	  - Specify characters not to match within the braces
-|		 - Either/Or
+[^ ]  - Specify characters not to match within the braces
+|     - Either/Or
 ()		- Group
 
 Quantifiers:
-*		- 0 or More
-+		- 1 or More
-?		- 0 or One
+*	  	- 0 or More
++ 		- 1 or More
+? 		- 0 or One
 {3}		- Exact Number
 {3,4}	- Range of Numbers {Min, Max}
