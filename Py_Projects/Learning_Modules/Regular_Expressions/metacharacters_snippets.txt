@@ -1,3 +1,4 @@
+# This text file stands as legend for metacharacters for the re module
 
 . 		- Any Character Except New Line
 \d		- Digit (0-9)
@@ -23,6 +24,3 @@ Quantifiers:
 ?		- 0 or One
 {3}		- Exact Number
 {3,4}	- Range of Numbers {Min, Max}
-
-
-
