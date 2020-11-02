@@ -1,1 +1,2 @@
-Create the re branch
+This learning module deals with the re or Regular Expressions module in python. The excercises in this branch demonstrate basic techniques in string matching using the re module.
+Most scripts use for loops to demonstrate the methods of the re module so that one may easily understand how they work. 
