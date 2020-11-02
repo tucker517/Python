@@ -13,15 +13,15 @@ data = response.json()
 # check the meta data, use len to count the number of specific items in the json array
 # print(len(data['list']['resources']))
 
-# Here we store all of the json as a dictionary so that we may individually access data by using
-# # [] on the usd_rates object which contains the name and price of the
-stations = dict()
-
+# Initialize the results object outside of the loop and then append the new dictionary stations to the list of results.
+results = []
 for station in data['results']:
-    name = station['name']
-    latitude = station['latitude']
-    longitude = station['longitude']
-    print(name, latitude, longitude)
+    stations = {}
+    stations['name']= station['name']
+    stations['latitude'] = station['latitude']
+    stations['longitude'] = station['longitude']
+    results.append(stations)
 
-with open('station_list.json', 'w') as f:
-    json.dump(response, f, indent=2)
+# Write the results to a json file
+with open('station_nll.json', 'w') as f:
+    json.dump(results, f, indent=2)
