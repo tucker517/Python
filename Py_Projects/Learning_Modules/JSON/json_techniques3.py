@@ -11,7 +11,7 @@ data = response.json()
 
 # print(json.dumps(data,indent=2))
 # check the meta data, use len to count the number of specific items in the json array
-# print(len(data['results'))
+# print(len(data['results']))
 
 # Initialize the results object outside of the loop and then append the new dictionary stations to the list of results.
 results = []
