@@ -23,7 +23,7 @@ people_string = '''
 
 data = json.loads(people_string)
 
-# Basic loop to extract data based on key value in the json array.
+# Basic loop to query certain data within the data object
 for person in data['people']:
     if person['name'] == 'John Smith':
         del person['phone']
