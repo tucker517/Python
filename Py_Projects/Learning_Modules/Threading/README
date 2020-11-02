@@ -1,0 +1,2 @@
+This learning module focuses on Python's Threading library to speed up I/O bound tasks such as network requests, file read/write, and overall taks which require down time for user
+inputs mostly.
