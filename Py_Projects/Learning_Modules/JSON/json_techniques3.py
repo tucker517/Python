@@ -2,8 +2,8 @@ import requests
 import json
 
 # Read allows you to specify the size of the file as an option arg default -1 for entire file.
-api_url = 'https://www.ncdc.noaa.gov/cdo-web/api/v2/stations?locationid=FIPS:08'
-payload = {'token': 'NtfJPIryTMzBffsxAHCKxsYbqFLpTput'}
+api_url = '**************'
+payload = {'token': '*******'}
 response = requests.get(api_url, headers=payload)
 
 data = response.json()
