@@ -21,6 +21,7 @@ people_string = '''
 }
 '''
 
+# Use json.loads to specify string to json object
 data = json.loads(people_string)
 
 # Basic loop to query certain data within the data object
@@ -29,7 +30,8 @@ for person in data['people']:
         del person['phone']
     elif person['name'] == 'Jane Doe':
         del person['emails']
-
+        
+# Use json.dumps to dump the new json object to a string
 new_str = json.dumps(data, indent=2, sort_keys=True)
 
 print(new_str)
