@@ -1,7 +1,6 @@
 """
-Unlike threading, mulitprocessing can assist in speeding up cpu bound tasks. However, multiprocessing can help speed up
-both CPU and IO bound tasks. I/O bound tasks include file system and networking tasks i.e. https requests, file output/input,
-and more...
+Unlike threading, mulitprocessing can assist in speeding up cpu bound tasks. I/O bound tasks include file system and networking tasks i.e. https requests, file output/input,
+and more... can also be sped up using multiprocessing
 """
 import time
 import multiprocessing
