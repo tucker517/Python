@@ -1,1 +1,2 @@
-Create the JSON learning module
+This module is a helpful reference for techniques in manipulating json data using the JSON module in python. The scripts in this directory are fairly short, straight forward
+excercises that demonstrate how to convert between data types and use basic loops to manipulate the json data.
