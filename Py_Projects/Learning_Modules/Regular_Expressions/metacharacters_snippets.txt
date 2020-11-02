@@ -14,8 +14,8 @@
 $	  	- End of a String
 
 []		- Matches characters in brackets
-[^ ]	- Specify characters not to match within the braces
-|		  - Either/Or
+[^ ]	  - Specify characters not to match within the braces
+|		 - Either/Or
 ()		- Group
 
 Quantifiers:
